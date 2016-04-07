@@ -1,0 +1,16 @@
+{
+  "name": "importar",
+  "version": "0.0.0",
+  "main": "./lib/importar",
+  "description": "A short description of your package",
+  "keywords": [
+  ],
+  "activationCommands": {
+    "atom-workspace": "importar:toggle"
+  },
+  "repository": "https://github.com/__package-author__/importar",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  }
+}
