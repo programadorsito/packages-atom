@@ -1,0 +1,38 @@
+{
+  "name": "language-tsql",
+  "version": "0.19.0",
+  "description": "A customized version of the SQL Package suitable for Transact-SQL",
+  "engines": {
+    "atom": "*",
+    "node": "*"
+  },
+  "homepage": "http://mattiascibien.net/language-tsql",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mattiascibien/language-tsql.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mattiascibien/language-tsql/issues"
+  },
+  "devDependencies": {
+    "coffeelint": "^1.10.1"
+  },
+  "readme": "# Transact-SQL language support in Atom [![Build Status](https://travis-ci.org/mattiascibien/language-tsql.svg)](https://travis-ci.org/mattiascibien/language-tsql)\n\nAdds syntax highlighting to T-SQL files in Atom.\n\nContributions are greatly appreciated. Please fork this repository and open a\npull request to add snippets, make grammar tweaks, etc.\n",
+  "readmeFilename": "README.md",
+  "_id": "language-tsql@0.19.0",
+  "_shasum": "6581ba3ff66124ece5301a5d1f6de7fc15b2a40b",
+  "_resolved": "file:..\\d-116225-10372-1j9f5ou\\package.tgz",
+  "_from": "..\\d-116225-10372-1j9f5ou\\package.tgz",
+  "_atomModuleCache": {
+    "version": 1,
+    "dependencies": [],
+    "extensions": {
+      ".json": [
+        "coffeelint.json",
+        "package.json"
+      ]
+    },
+    "folders": []
+  }
+}

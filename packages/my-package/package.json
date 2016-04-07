@@ -1,0 +1,27 @@
+{
+  "name": "my-package",
+  "main": "./lib/my-package",
+  "version": "0.0.0",
+  "description": "A short description of your package",
+  "keywords": [
+  ],
+  "activationCommands": {
+    "atom-workspace": "my-package:toggle"
+  },
+  "repository": "https://github.com/atom/my-package",
+  "license": "MIT",
+  "author" : "Danielito",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {
+    "utils-atom":"0.1.6"
+  },
+  "consumedServices": {
+    "console-panel": {
+      "versions": {
+        "^1.0.0": "consumeConsolePanel"
+      }
+    }
+  }
+}

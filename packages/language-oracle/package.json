@@ -1,0 +1,40 @@
+{
+  "name": "language-oracle",
+  "version": "1.4.0",
+  "description": "Oracle PL/SQL language support in Atom",
+  "keywords": [
+    "oracle",
+    "plsql",
+    "sql",
+    "PL/SQL"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OraOpenSource/language-oracle.git"
+  },
+  "bugs": {
+    "url": "https://github.com/OraOpenSource/language-oracle/issues"
+  },
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {},
+  "readme": "# Oracle PL/SQL language support in Atom\n\nAdd syntax highlighting support for Oracle PL/SQL code\n\nThis code was [converted](http://atom.io/docs/latest/converting-a-text-mate-bundle) from the [Oracle TextMate bundle](https://github.com/mulander/oracle.tmbundle) on the 24th October 2015.\n\nContributions are greatly appreciated. Please fork this repository and open a pull request to add snippets, make grammar tweaks, etc.\n\n## Package conflicts\n\n1. [file-types](https://atom.io/packages/file-types)\n<br />Prior to this extension, in order to get your plsql files (extension plb, pls, pkb, pks, etc) recognised with the SQL grammar, you may have used this extension to map them to the `sql` extension.\n```\n\"file-types\":\n    pkb: \"source.sql\"\n    pks: \"source.sql\"\n    pls: \"source.sql\"\n    plb: \"source.sql\"\n```\nThis is no longer necessary, as this grammer picks up all relevant extensions and correctly maps them to `PL/SQL (Oracle)`. You should be able to safely remove that configuration.\n",
+  "readmeFilename": "README.md",
+  "homepage": "https://github.com/OraOpenSource/language-oracle#readme",
+  "_id": "language-oracle@1.4.0",
+  "_shasum": "5d92ae1b19fd65f9b08f0d68895ce836c1b25b41",
+  "_resolved": "file:..\\d-116225-11712-15ywlwg\\package.tgz",
+  "_from": "..\\d-116225-11712-15ywlwg\\package.tgz",
+  "_atomModuleCache": {
+    "version": 1,
+    "dependencies": [],
+    "extensions": {
+      ".json": [
+        "package.json"
+      ]
+    },
+    "folders": []
+  }
+}
