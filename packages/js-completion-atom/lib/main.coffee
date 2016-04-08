@@ -1,3 +1,4 @@
+utils = require "./utils-atom"
 packageDeps = require 'atom-package-deps'
 provider = require './autocomplete-provider'
 

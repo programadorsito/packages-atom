@@ -1,27 +1,22 @@
-{
+  {
   "name": "my-package",
-  "main": "./lib/my-package",
-  "version": "0.0.0",
-  "description": "A short description of your package",
+  "version": "0.1.5",
+  "description": "Dialogo de entrada",
+  "main": "lib/my-package",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/programadorsito/my-package.git"
+  },
   "keywords": [
+    "atom"
   ],
-  "activationCommands": {
-    "atom-workspace": "my-package:toggle"
-  },
-  "repository": "https://github.com/atom/my-package",
   "license": "MIT",
-  "author" : "Danielito",
-  "engines": {
-    "atom": ">=1.0.0 <2.0.0"
-  },
   "dependencies": {
-    "utils-atom":"0.1.6"
+    "atom-space-pen-views": "2.2.0"
   },
-  "consumedServices": {
-    "console-panel": {
-      "versions": {
-        "^1.0.0": "consumeConsolePanel"
-      }
-    }
+  "devDependencies": {
+    "coffee-script": "^1.9.3"
   }
 }

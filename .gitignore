@@ -1,0 +1,8 @@
+.apm
+.node-gyp
+blob-store
+compile-cache
+storage
+config.cson
+keymap.json
+snippets.cson
