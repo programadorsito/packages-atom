@@ -10,7 +10,7 @@ export default {
 
   activate(state) {
     this.subscriptions = new CompositeDisposable();
-
+    atom.commands.emitter.on("importar", this.toggle);
     this.subscriptions.add(atom.commands.add('atom-workspace', {
       'importar:toggle': () => this.toggle()
     }));

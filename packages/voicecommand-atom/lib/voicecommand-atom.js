@@ -7,12 +7,11 @@ import { CompositeDisposable } from 'atom';
 export default {
 
   subscriptions: null,
-
+  
   activate(state) {
     this.subscriptions = new CompositeDisposable();
-    atom.commands.emitter.on("insertar texto", this.toggle);
     this.subscriptions.add(atom.commands.add('atom-workspace', {
-      'sayit:toggle': () => this.toggle()
+      'voicecommand-atom:interpretar': () => this.interpretar()
     }));
   },
 
@@ -22,16 +21,13 @@ export default {
   serialize() {
   },
 
-  toggle() {
-    console.log("va a insertar");
+  interpretar() {
     utils.hear(function (text){
-      console.log("el texto insertado  es : "+text);
-      utils.insert_text(text);
+      if(text){
+        text=text.toLowerCase();
+        console.log("el comando es : "+text);
+        utils.run_command(text);
+      }
     });
-  },
-
-  otra(){
-    console.log("que mierda es esto");
   }
-
 };

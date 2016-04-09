@@ -4,16 +4,13 @@ var utils=require("utils-atom");
 
 import { CompositeDisposable } from 'atom';
 
-
-
-export default {
+module.exports= {
 
   subscriptions: null,
 
   activate(state) {
-    console.log("haciendo lo posible porque se den las cosas");
+    atom.commands.emitter.on("historia archivos", module.exports.mostrar);
     this.subscriptions = new CompositeDisposable();
-
     this.subscriptions.add(atom.commands.add('atom-workspace', {
       'history-files-atom:mostrar': () => this.mostrar()
     }));
@@ -26,6 +23,9 @@ export default {
   },
 
   mostrar() {
-    console.log("historia de archivos");
+    list=utils.load_json("D:/atom/packages/packages/history-files-atom/data/history_files.json");
+    utils.show_list(list, function(item) {
+      atom.workspace.open(item);
+    });
   }
 };

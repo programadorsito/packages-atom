@@ -1,0 +1,14 @@
+{
+  "name": "start",
+  "main": "./lib/main",
+  "version": "1.0.2",
+  "description": "Completion for javascript",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coronalabs/CoronaSDK-AtomPlugin.git"
+  },
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  }
+}

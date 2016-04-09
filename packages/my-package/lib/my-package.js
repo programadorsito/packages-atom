@@ -22,7 +22,7 @@ export default {
   },
 
   toggle() {
-    utils.show_list(["daniel", "alejandro", "molina", "yepes"], function (item) {
+    utils.show_list([["daniel", "amando"], ["alejandro", "molina"]], function (item) {
       console.log("este es el otro "+item);
     });
   },

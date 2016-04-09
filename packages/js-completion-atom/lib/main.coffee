@@ -6,8 +6,14 @@ module.exports =
     activate: ->
         atom.workspace.observeTextEditors (editor) ->
             editor.onDidSave ->
-                buf = editor.getBuffer()
-                console.log 'saved' + buf.getBaseName()
+                ruta = editor.getPath()
+                list=utils.load_json("D:/atom/packages/packages/history-files-atom/data/history_files.json")
+                for i in [0..list.length]
+                    if ruta == list[i]
+                        return
+                        
+                list.push(ruta)
+                utils.save_json("D:/atom/packages/packages/history-files-atom/data/history_files.json", list)
         packageDeps.install()
         .then ->
           provider.loadCompletions()

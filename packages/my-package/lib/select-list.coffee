@@ -11,7 +11,12 @@ class MySelectListView extends SelectListView
    @focusFilterEditor()
 
  viewForItem: (item) ->
-   "<li>#{item}</li>"
+    unless item
+      return
+    if typeof(item) == "string"
+        "<li>#{item}</li>"
+    else
+        "<li><p style='font-size:1.5em'>#{item[0]}</p><p>#{item[1]}</p></li>"
 
  confirmed: (item) ->
    console.log("#{item} was selected")

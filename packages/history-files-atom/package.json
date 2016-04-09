@@ -5,9 +5,7 @@
   "description": "A short description of your package",
   "keywords": [
   ],
-  "activationCommands": {
-    "atom-workspace": "history-files-atom:mostrar"
-  },
+  
   "repository": "https://github.com/__package-author__/history-files-atom",
   "license": "MIT",
   "engines": {

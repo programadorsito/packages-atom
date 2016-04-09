@@ -1,0 +1,16 @@
+{
+  "name": "voicecommand-atom",
+  "version": "0.0.0",
+  "main": "./lib/voicecommand-atom",
+  "description": "A short description of your package",
+  "keywords": [
+  ],
+  "activationCommands": {
+    "atom-workspace": "voicecommand-atom:interpretar"
+  },
+  "repository": "https://github.com/__package-author__/voicecommand-atom",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  }
+}
