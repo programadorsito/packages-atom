@@ -1,0 +1,31 @@
+".source.plsql.oracle":
+  "create or replace":
+    prefix: "create replace"
+    body: "create or replace"
+  "materialized view":
+    prefix: "matview"
+    body: "materialized view"
+  "New Function":
+    prefix: "funccreate"
+    body: "function ${1:function_name}(\n\t${2:p_param_name} in ${3:data_type};\n) return ${4:return_type}\nas\n\t$5\nbegin\n\n\t$6\n\nend $1;"
+  "New Procedure":
+    prefix: "proccreate"
+    body: "procedure ${1:procedure_name}(\n\t${2:p_param_name} in ${3:data_type};\n)\nas\n\t$4\nbegin\n\n\t$5\n\nend $1;"
+  "Anonymous block":
+    prefix: "anonb"
+    body: "declare\n\t${1:l_variable} ${2:data_type};\nbegin\n\n\t$0\n\nexception\n\twhen ${3:others}\n\tthen\n\t\traise;\nend;"
+  "elsif ...":
+    prefix: "elsif"
+    body: "elsif ${1:condition}\nthen\n\t$0"
+  "if ... else ... end":
+    prefix: "ifelse"
+    body: "if ${1:condition}\nthen\n\t$2\nelse\n\t$3\nend if;"
+  "if ... end":
+    prefix: "ifthen"
+    body: "if ${1:condition}\nthen\n\t$0\nend if;"
+  "loop ... end":
+    prefix: "loop"
+    body: "loop\n\t$0\nend loop;"
+  "for i in ":
+    prefix: "forloop"
+    body: "for i in 1..${1:collection_name}.count\nloop\n\t$0\nend loop;"
