@@ -1,5 +1,7 @@
 {
   "atom-workspace": {
-    "alt-c": "voicecommand-atom:interpretar"
+    "alt-c": "voicecommand-atom:interpretar",
+    "ctrl-shift-alt-c": "voicecommand-atom:crearComando"
   }
 }
+ 

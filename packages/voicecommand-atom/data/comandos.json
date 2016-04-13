@@ -1,0 +1,1 @@
+{"maven clean":"mvn clean^","maven package":"mvn package^","rails server":"rails server^","rails version":"rails --version^","gcc compile":"gcc \"$path\" -o \"$name\""}

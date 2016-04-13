@@ -5,11 +5,11 @@
   "description": "A short description of your package",
   "keywords": [
   ],
-  "activationCommands": {
-    "atom-workspace": "voicecommand-atom:interpretar"
-  },
   "repository": "https://github.com/__package-author__/voicecommand-atom",
   "license": "MIT",
+  "dependencies": {
+    "utils-atom": "0.1.7"
+  },
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   }

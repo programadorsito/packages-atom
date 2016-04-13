@@ -1,0 +1,13 @@
+{
+  "name": "ejecutar-atom",
+  "version": "0.0.0",
+  "main": "./ejecutar",
+  "description": "A short description of your package",
+  "keywords": [
+  ],
+  "repository": "https://github.com/__package-author__/ejecutar-atom",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  }
+}
