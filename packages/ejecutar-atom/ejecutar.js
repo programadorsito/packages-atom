@@ -30,6 +30,7 @@ export default {
       "python":`python ${ruta}`,
       "java":`java ${name}`,
       "go":`go run ${ruta}`,
+      "javascript":`node ${ruta}`,
       "ruby":`ruby ${ruta}`
     };
     comando=comandos[lang];

@@ -1,3 +1,3 @@
 @echo off
-go run C:\Users\dmolina\Desktop\app.go
+node C:\Users\dmolina\Desktop\app.js
 pause>nul

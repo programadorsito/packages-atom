@@ -62,6 +62,10 @@ export default {
     }));
 
     this.subscriptions.add(atom.commands.add('atom-workspace', {
+      'voicecommand-atom:interpretarIngles': () => this.interpretarIngles()
+    }));
+
+    this.subscriptions.add(atom.commands.add('atom-workspace', {
       'voicecommand-atom:crearComando': () => this.crearComando()
     }));
   },
@@ -73,17 +77,24 @@ export default {
   },
 
   interpretar() {
+    this.escucharComando("es-CO");
+  },
+
+  interpretarIngles(){
+    this.escucharComando("en-US");
+  },
+
+  escucharComando(lang){
     utils.hear(function (text){
       if(text){
         text=text.toLowerCase();
         console.log("el comando es : "+text);
-        utils.run_command(text);
+        atom.commands.emitter.emit(text);
       }
-    });
+    }, lang);
   },
 
   activarComandos(){
-    console.log("va a activar los comandos");
     comandos=utils.load_json(rutaArchivo);
     keys=Object.keys(comandos);
     for(var i=0;i<keys.length;i++){
@@ -97,6 +108,7 @@ export default {
     objecto={};
     objecto[key]= () => this.procesarYEjecutarComando(comando);
     this.subscriptions.add(atom.commands.add('atom-workspace', objecto));
+    atom.commands.emitter.on(key, () => this.procesarYEjecutarComando(comando));
   },
 
   crearComando(){
@@ -110,12 +122,8 @@ export default {
   },
 
   procesarComando(valor){
-    console.log(this);
     matches = comando_actual.match(/~[\w]+/);
-    console.log("el comando entro asi : "+comando_actual);
-    console.log("los matches son  : "+matches);
     if (comando_actual.indexOf("~")!=-1)comando_actual=comando_actual.replace(matches[0], valor);
-    console.log("el comando salio asi : "+comando_actual);
     matches = comando_actual.match(/~[\w]+/);
     if(comando_actual.indexOf("~")!=-1){
       utils.input_dialog(this.procesarComando, matches[0].replace("~", ""));
